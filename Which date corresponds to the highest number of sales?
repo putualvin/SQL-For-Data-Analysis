@@ -1,0 +1,10 @@
+select
+	postcode ,
+	round(avg(price), 2) as "Average Price"
+from
+	raw_sales rs
+group by
+	postcode
+order by
+	"Average Price" desc
+limit 10
